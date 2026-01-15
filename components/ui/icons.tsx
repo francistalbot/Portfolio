@@ -1,9 +1,29 @@
-export type IconProps = React.ComponentProps<"svg">;
+export type IconProps = React.SVGProps<SVGSVGElement>;
 export type Icon = keyof typeof Icons;
 export type IconComponent = (props: IconProps) => React.ReactElement;
 
 export const Icons = {
-  Laptop: (props) => (
+  MenuBurger: (props: IconProps) => (
+    <svg
+      aria-label="Menu"
+      fill="none"
+      height={24}
+      role="img"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      viewBox="0 0 24 24"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <line x1="3" x2="21" y1="6" y2="6" />
+      <line x1="3" x2="21" y1="12" y2="12" />
+      <line x1="3" x2="21" y1="18" y2="18" />
+    </svg>
+  ),
+  Laptop: (props: IconProps) => (
     <svg
       aria-label="Laptop"
       fill="none"
@@ -21,7 +41,7 @@ export const Icons = {
       <path d="M20 16V7a2 2 0 00-2-2H6a2 2 0 00-2 2v9m16 0H4m16 0l1.28 2.55a1 1 0 01-.9 1.45H3.62a1 1 0 01-.9-1.45L4 16" />
     </svg>
   ),
-  DotFilled: (props) => (
+  DotFilled: (props: IconProps) => (
     <svg
       aria-hidden="true"
       height="32"
@@ -36,7 +56,7 @@ export const Icons = {
       />
     </svg>
   ),
-  Contra: (props) => (
+  Contra: (props: IconProps) => (
     <svg fill="none" height={24} viewBox="0 0 60 60" width={24} {...props}>
       <path
         clipRule="evenodd"
@@ -70,7 +90,7 @@ export const Icons = {
       />
     </svg>
   ),
-  Google: (props) => (
+  Google: (props: IconProps) => (
     <svg
       height={32}
       viewBox="0 0 24 24"
@@ -84,7 +104,7 @@ export const Icons = {
       />
     </svg>
   ),
-  Git: (props) => (
+  Git: (props: IconProps) => (
     <svg
       height={32}
       viewBox="0 0 32 32"

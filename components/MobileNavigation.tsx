@@ -2,8 +2,6 @@
 
 import Link from "next/link";
 import { navLinks } from "@/config/site";
-
-import { useIsMobile } from "@/hooks/use-mobile";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,7 +11,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { Button } from "./ui/button";
+import { Icons } from "./ui/icons";
 
 export function MobileNavigation({ className }: { className?: string }) {
   return (
@@ -22,15 +20,15 @@ export function MobileNavigation({ className }: { className?: string }) {
     >
       <NavigationMenuList className="flex-wrap">
         <NavigationMenuItem>
-          <NavigationMenuTrigger  noChevron={true} className={navigationMenuTriggerStyle()}>
-            Menu
+          <NavigationMenuTrigger noChevron={true} className={navigationMenuTriggerStyle()}>
+            <Icons.MenuBurger className="size-5 rotate-0 scale-100 transition dark:-rotate-90 dark:scale-0" />
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             {navLinks.map((link) => (
               <NavigationMenuItem key={link.href}>
                 <NavigationMenuLink asChild>
-                  <Link href={link.href}>
-                  {link.label}
+                  <Link href={link.href} className="whitespace-nowrap px-4 py-3 text-base">
+                    {link.label}
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>

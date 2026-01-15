@@ -5,6 +5,7 @@ import { Icons } from "./ui/icons";
 import Link from "next/link";
 import { ModeSwitcher } from "./ModeSwitcher";
 import { MobileNavigation } from "./MobileNavigation";
+import { MobileNav } from "./mobile-nav";
 
 export function Header() {
   return (
@@ -15,7 +16,7 @@ export function Header() {
           <span className="sr-only">Francis Talbot</span>
         </Link>
 
-        <DesktopNavigation className="ml-auto hidden md:flex"/>
+        <DesktopNavigation className="hidden md:flex"/>
         <nav className="ml-auto hidden items-center gap-1 md:flex">
           <Link href={siteConfig.links.github}>
             <Button rel="noreferrer" size="icon" variant="link">
