@@ -13,8 +13,8 @@ export const siteConfig = {
 };
 
 export const navLinks = [
-  { href: "/", label: "Accueil" },
-  { href: "/about", label: "À propos" },
-  { href: "/projects", label: "Projets" },
-  { href: "/contact", label: "Contact" },
+  { href: "#home", label: "Accueil" },
+  { href: "#projects", label: "Projets" },
+  { href: "#about", label: "À propos" },
+  { href: "#contact", label: "Contact" },
 ];

@@ -14,6 +14,20 @@ import {
 import { Icons } from "./ui/icons";
 
 export function MobileNavigation({ className }: { className?: string }) {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("#")) {
+      const element = document.querySelector(href);
+      if (element) {
+        e.preventDefault();
+        element.scrollIntoView({ behavior: "smooth" });
+      } else {
+        // L'élément n'existe pas sur cette page, naviguer vers la page principale
+        e.preventDefault();
+        window.location.href = `/${href}`;
+      }
+    }
+  };
+
   return (
     <NavigationMenu
       className={`${className} relative px-3 py-2 text-fg/60 transition-colors hover:text-fg data-[active='true']:text-fg`}
@@ -27,7 +41,7 @@ export function MobileNavigation({ className }: { className?: string }) {
             {navLinks.map((link) => (
               <NavigationMenuItem key={link.href}>
                 <NavigationMenuLink asChild>
-                  <Link href={link.href} className="whitespace-nowrap px-4 py-3 text-base">
+                  <Link href={link.href} onClick={(e) => handleClick(e, link.href)} className="whitespace-nowrap px-4 py-3 text-base">
                     {link.label}
                   </Link>
                 </NavigationMenuLink>

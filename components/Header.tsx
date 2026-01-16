@@ -5,13 +5,12 @@ import { Icons } from "./ui/icons";
 import Link from "next/link";
 import { ModeSwitcher } from "./ModeSwitcher";
 import { MobileNavigation } from "./MobileNavigation";
-import { MobileNav } from "./mobile-nav";
 
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full animate-delay-1000 animate-fade-down border-border/40 border-b bg-bg backdrop-blur-sm dark:bg-bg/95 supports-backdrop-filter:dark:bg-bg/60">
       <div className="mx-auto px-8 flex h-16 max-w-(--breakpoint-2xl) items-center">
-        <Link href="/">
+        <Link href="/#home">
           <Icons.Logo className="size-6" />
           <span className="sr-only">Francis Talbot</span>
         </Link>
