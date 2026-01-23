@@ -7,7 +7,7 @@ import type { Icon } from "@/components/ui/icons";
 
 const getTechnology = (technology: string): { name: string; icon: Icon; url: string } | null => {
   const techMapping: Record<string, { icon: Icon; url: string }> = {
-    "React Native": { icon: "React", url: "https://reactnative.dev/" },
+    "React Native": { icon: "ReactNative", url: "https://reactnative.dev/" },
     "React": { icon: "React", url: "https://react.dev/" },
     "Expo": { icon: "Expo", url: "https://expo.dev/" },
     "Node.js": { icon: "Node", url: "https://nodejs.org/" },
@@ -26,6 +26,7 @@ const getTechnology = (technology: string): { name: string; icon: Icon; url: str
     "Git": { icon: "Git", url: "https://git-scm.com/" },
     "GitHub Actions": { icon: "GitHub", url: "https://github.com/" },
     "Zod": { icon: "Zod", url: "https://zod.dev/" },
+    "Vitest": { icon: "Vitest", url: "https://vitest.dev/" },
   };
 
   const mapping = techMapping[technology];
@@ -41,7 +42,7 @@ const getTechnology = (technology: string): { name: string; icon: Icon; url: str
 const Projects = () => {
     const featuredProjects = projects.filter(project => project.featured);
     return (
-    <section id="projects" className="mt-20">
+    <section id="projects" className="mt-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className=" text-3xl font-bold text-gray-900 dark:text-white mb-12">
             Mes Projets
         </h2>
