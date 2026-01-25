@@ -54,35 +54,33 @@ export default function About() {
             <AccordionContent>
               {item.items && (
                 <div className="mt-4 flex flex-wrap gap-3">
-                  {item.items.map((skill) => {
-                    const tech = getTechnology(skill);
-                    if (!tech) {
+                    {item.items.map((skill) => {
+                    if (!skill.icon) {
                       return (
                         <div
-                          key={skill}
+                          key={skill.name}
                           className="bg-blue-50 dark:bg-blue-900/20 px-3 py-1.5 rounded-lg text-base"
                         >
                           <span className="text-gray-900 dark:text-white font-medium">
-                            {skill}
+                            {skill.name}
                           </span>
                         </div>
                       );
                     }
                     
-                    const IconComponent = Icons[tech.icon];
-                    
+                    const IconComponent = Icons[skill.icon];
                     return (
                       <a
-                        href={tech.url}
-                        key={tech.name}
+                        href={skill.url}
+                        key={skill.name}
                         rel="noopener noreferrer"
                         target="_blank"
-                        title={tech.name}
+                        title={skill.name}
                         className="flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 px-3 py-1.5 rounded-lg text-base hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
                       >
                         <IconComponent className="size-4" />
                         <span className="text-gray-900 dark:text-white ">
-                          {tech.name}
+                          {skill.name}
                         </span>
                       </a>
                     );
