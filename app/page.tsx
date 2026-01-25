@@ -1,7 +1,6 @@
 import Hero from "@/app/_components/hero";
 import Projects from "@/app/_components/projects";
 import About from "./_components/about";
-import Contact from "./_components/contact";
 
 export default function Home() {
   return (
