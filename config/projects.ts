@@ -181,7 +181,6 @@ export const projects: Project[] = [
   },
   {
     id: "6",
-    featured: true,
     title: "Application Docker Vulnérable XSS",
     description:
       "Démonstration de vulnérabilité Reflected XSS et implémentation des correctifs de sécurité.",
@@ -210,7 +209,6 @@ export const projects: Project[] = [
   },
   {
     id: "7",
-    featured: true,
     title: "Suite de Tests Complète et Pipeline CI/CD",
     description:
       "Tests automatisés multi-niveaux (unitaires, composants, E2E) avec analyse de code et optimisation de performance.",

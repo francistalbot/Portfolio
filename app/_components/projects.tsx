@@ -50,7 +50,7 @@ const Projects = () => {
         {featuredProjects.map((project, i) =>
             <BentoGrid.Item
               key={project.id}
-              className= {`bg-white ${i === 0 ? "md:col-span-2 lg:col-span-2" : ""} ${i === 1 ? "md:row-span-2 lg:row-span-1 lg:col-span-1" : ""}${i === 2 ? "md:row-span-1 lg:row-span-2 lg:col-span-1" : ""}${i === 4 ? "md:row-span-1 lg:col-span-2" : ""}${i === 5 || i===6 ? "md:col-span-1 lg:col-span-2 " : ""}`}
+              className= {`bg-white ${i === 0 ? "md:col-span-2 lg:col-span-2" : ""} ${i === 1 ? "md:row-span-2 lg:row-span-1 lg:col-span-1" : ""}${i === 2 ? "md:row-span-2 lg:row-span-2 lg:col-span-1" : ""}${i === 4 ? "md:row-span-1 md:col-span-2 lg:col-span-2" : ""}`}
             > 
          
             <div className="flex flex-wrap items-center gap-3" >
