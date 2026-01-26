@@ -77,8 +77,6 @@ export const projects: Project[] = [
       "Responsive Design",
     ],
     cours: "570-701-AH",
-    githubUrl: "#",
-    liveUrl: "#",
   },
   {
     id: "3",

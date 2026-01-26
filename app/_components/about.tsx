@@ -10,37 +10,6 @@ import {
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-const getTechnology = (technology: string): { name: string; icon: Icon; url: string } | null => {
-  const techMapping: Record<string, { icon: Icon; url: string }> = {
-    "React": { icon: "React", url: "https://react.dev/" },
-    "Next.js": { icon: "NextJS", url: "https://nextjs.org/" },
-    "React Native": { icon: "ReactNative", url: "https://reactnative.dev/" },
-    "TypeScript": { icon: "TypeScript", url: "https://www.typescriptlang.org/" },
-    "Tailwind CSS": { icon: "TailwindCSS", url: "https://tailwindcss.com/" },
-    "Node.js": { icon: "Node", url: "https://nodejs.org/" },
-    "Express": { icon: "Express", url: "https://expressjs.com/" },
-    "Laravel": { icon: "Laravel", url: "https://laravel.com/" },
-    "PHP": { icon: "PHP", url: "https://www.php.net/" },
-    "MongoDB": { icon: "MongoDb", url: "https://www.mongodb.com/" },
-    "Firebase": { icon: "Firebase", url: "https://firebase.google.com/" },
-    "MySQL": { icon: "MySQL", url: "https://www.mysql.com/" },
-    "PostgreSQL": { icon: "Postgres", url: "https://www.postgresql.org/" },
-    "Git": { icon: "Git", url: "https://git-scm.com/" },
-    "GitHub": { icon: "GitHub", url: "https://github.com/" },
-    "Docker": { icon: "Docker", url: "https://www.docker.com/" },
-    "Cypress": { icon: "Cypress", url: "https://www.cypress.io/" },
-  };
-
-  const mapping = techMapping[technology];
-  if (!mapping) return null;
-
-  return {
-    name: technology,
-    icon: mapping.icon,
-    url: mapping.url,
-  };
-};
-
 export default function About() {
   return (
     <section id="about" className="mt-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

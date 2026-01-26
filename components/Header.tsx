@@ -11,7 +11,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full animate-delay-1000 animate-fade-down border-border/40 border-b bg-bg backdrop-blur-sm dark:bg-bg/95 supports-backdrop-filter:dark:bg-bg/60">
       <div className="mx-auto px-8 flex h-16 max-w-(--breakpoint-2xl) items-center">
         <Link href="/#home">
-          <Icons.LogoFT className="h-6 w-8" />
+          <Icons.LogoFT className="size-6" />
           <span className="sr-only">Francis Talbot</span>
         </Link>
 

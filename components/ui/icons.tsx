@@ -808,7 +808,7 @@ export const Icons = {
   LogoFT: (props) => (
     <svg
       height={32}
-      viewBox="0 0 40 32"
+      viewBox="9.5 6 26.6 17.5"
       width={40}
       xmlns="http://www.w3.org/2000/svg"
       {...props}
