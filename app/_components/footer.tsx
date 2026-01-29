@@ -6,7 +6,7 @@ import { Icons } from "@/components/ui/icons";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-100 dark:bg-zinc-900 py-12 mt-20">
+    <footer className="bg-gray-100 dark:bg-zinc-900 py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Colonne 1: Logo et Description */}
