@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { projects } from "@/config/projects";
+import { Pill } from "@/components/ui/pill";
 
 export default function Projects() {
   return (
@@ -34,14 +35,15 @@ export default function Projects() {
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                  {project.tags.map((tag) => {
+                    return (
+                    <Pill
+                    key={tag}
+                    name={tag}
+                    size="small"
+                    />
+                  );
+                  })}
                 </div>
               </div>
             </Link>

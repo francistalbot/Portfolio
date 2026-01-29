@@ -4,40 +4,8 @@ import { Icons } from "@/components/ui/icons";
 import {projects} from "@/config/projects";
 import Link from "next/link";
 import type { Icon } from "@/components/ui/icons";
-
-const getTechnology = (technology: string): { name: string; icon: Icon; url: string } | null => {
-  const techMapping: Record<string, { icon: Icon; url: string }> = {
-    "React Native": { icon: "ReactNative", url: "https://reactnative.dev/" },
-    "React": { icon: "React", url: "https://react.dev/" },
-    "Expo": { icon: "Expo", url: "https://expo.dev/" },
-    "Node.js": { icon: "Node", url: "https://nodejs.org/" },
-    "Express": { icon: "Express", url: "https://expressjs.com/" },
-    "Firebase": { icon: "Firebase", url: "https://firebase.google.com/" },
-    "Laravel": { icon: "Laravel", url: "https://laravel.com/" },
-    "MongoDB": { icon: "MongoDb", url: "https://www.mongodb.com/" },
-    "MySQL": { icon: "MySQL", url: "https://www.mysql.com/" },
-    "PayPal API": { icon: "Paypal", url: "https://developer.paypal.com/" },
-    "Stripe API": { icon: "Stripe", url: "https://stripe.com/" },
-    "Figma": { icon: "Figma", url: "https://www.figma.com/" },
-    "JavaScript": { icon: "JavaScript", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
-    "TypeScript": { icon: "TypeScript", url: "https://www.typescriptlang.org/" },
-    "Docker": { icon: "Docker", url: "https://www.docker.com/" },
-    "Cypress": { icon: "Cypress", url: "https://www.cypress.io/" },
-    "Git": { icon: "Git", url: "https://git-scm.com/" },
-    "GitHub Actions": { icon: "GitHub", url: "https://github.com/" },
-    "Zod": { icon: "Zod", url: "https://zod.dev/" },
-    "Vitest": { icon: "Vitest", url: "https://vitest.dev/" },
-  };
-
-  const mapping = techMapping[technology];
-  if (!mapping) return null;
-
-  return {
-    name: technology,
-    icon: mapping.icon,
-    url: mapping.url,
-  };
-};
+import { getTechnology } from "@/lib/technologies";
+import { Pill } from "@/components/ui/pill";
 
 const Projects = () => {
     const featuredProjects = projects.filter(project => project.featured);
@@ -46,20 +14,18 @@ const Projects = () => {
         <h2 className=" text-3xl font-bold text-gray-900 dark:text-white mb-12">
             Mes Projets
         </h2>
-      <BentoGrid.Root>
+      <BentoGrid.Root >
         {featuredProjects.map((project, i) =>
             <BentoGrid.Item
               key={project.id}
-              className= {`bg-white ${i === 0 ? "md:col-span-2 lg:col-span-2" : ""} ${i === 1 ? "md:row-span-2 lg:row-span-1 lg:col-span-1" : ""}${i === 2 ? "md:row-span-2 lg:row-span-2 lg:col-span-1" : ""}${i === 4 ? "md:row-span-1 md:col-span-2 lg:col-span-2" : ""}`}
+              className= {`  ${i === 0 ? "md:col-span-2 lg:col-span-2" : ""} ${i === 1 ? "md:row-span-2 lg:row-span-1 lg:col-span-1" : ""}${i === 2 ? "md:row-span-2 lg:row-span-2 lg:col-span-1" : ""}${i === 4 ? "md:row-span-1 md:col-span-2 lg:col-span-2" : ""}`}
             > 
          
             <div className="flex flex-wrap items-center gap-3" >
               {project.technologies.map((technology) => {
                 const tech = getTechnology(technology);
-                if (!tech) return null;
-                
+                if (!tech || !tech.icon) return null;
                 const Icon = Icons[tech.icon];
-
                 return (
                   <a
                     href={tech.url}

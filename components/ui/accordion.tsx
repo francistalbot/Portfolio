@@ -19,7 +19,7 @@ function AccordionItem({
   return (
     <AccordionPrimitive.Item
       data-slot="accordion-item"
-      className={cn("", className)}
+      className={cn("dark:border-neutral-700 dark:bg-neutral-900", className)}
       {...props}
     />
   )

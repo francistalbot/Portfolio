@@ -9,6 +9,8 @@ import {
 } from '@/components/ui/accordion'
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { getTechnology } from "@/lib/technologies";
+import { Pill } from "@/components/ui/pill";
 
 export default function About() {
   return (
@@ -21,38 +23,19 @@ export default function About() {
           <AccordionItem value={item.id} key={item.id} className="bg-white border rounded-xl p-4 shadow-input transition duration-200 hover:shadow-xl">
             <AccordionTrigger className="text-xl font-semibold cursor-pointer">{item.title}</AccordionTrigger>
             <AccordionContent>
-              {item.items && (
+              {item.technologies && (
                 <div className="mt-4 flex flex-wrap gap-3">
-                    {item.items.map((skill) => {
-                    if (!skill.icon) {
+                    {item.technologies.map((technology) => {
+                      const tech = getTechnology(technology);
+                      if (!tech) return null;
                       return (
-                        <div
-                          key={skill.name}
-                          className="bg-blue-50 dark:bg-blue-900/20 px-3 py-1.5 rounded-lg text-base"
-                        >
-                          <span className="text-gray-900 dark:text-white font-medium">
-                            {skill.name}
-                          </span>
-                        </div>
+                        <Pill
+                          key={technology}
+                          name={technology ? tech.name : technology}
+                          url={technology ? tech.url : undefined}
+                          icon={technology ? tech.icon : undefined}
+                        />
                       );
-                    }
-                    
-                    const IconComponent = Icons[skill.icon];
-                    return (
-                      <a
-                        href={skill.url}
-                        key={skill.name}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        title={skill.name}
-                        className="flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 px-3 py-1.5 rounded-lg text-base hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
-                      >
-                        <IconComponent className="size-4" />
-                        <span className="text-gray-900 dark:text-white ">
-                          {skill.name}
-                        </span>
-                      </a>
-                    );
                   })}
                 </div>
               )}

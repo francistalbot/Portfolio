@@ -19,7 +19,7 @@ function BentoGridItem(props: DivProps) {
     <div
       {...props}
       className={cn(
-        "group/bento row-span-1 flex flex-col justify-between gap-4 rounded-xl border p-4 shadow-input transition duration-200 hover:shadow-xl",
+        "group/bento row-span-1 flex flex-col justify-between gap-4 rounded-xl border border-neutral-200 bg-white p-4 shadow-input transition duration-200 hover:shadow-xl dark:border-neutral-700 dark:bg-neutral-900",
         props.className
       )}
     />

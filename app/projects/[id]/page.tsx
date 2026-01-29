@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/config/projects";
+import { Pill } from "@/components/ui/pill";
+import { getTechnology } from "@/lib/technologies";
 
 export default async function ProjectDetail({
   params,
@@ -37,12 +39,11 @@ export default async function ProjectDetail({
           </p>
           <div className="flex flex-wrap gap-2 mb-6">
             {project.tags.map((tag) => (
-              <span
-                key={tag}
-                className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm"
-              >
-                {tag}
-              </span>
+              <Pill
+                name={tag}
+                key={tag} 
+                size="small"
+              />
             ))}
           </div>
           <div className="flex gap-4">
@@ -102,14 +103,18 @@ export default async function ProjectDetail({
             Technologies utilisées
           </h2>
           <div className="flex flex-wrap gap-3">
-            {project.technologies.map((tech) => (
-              <span
-                key={tech}
-                className="px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg"
-              >
-                {tech}
-              </span>
-            ))}
+            {project.technologies.map((technology) => {
+              const tech = getTechnology(technology);
+              if (!tech) return null;
+              return (
+                <Pill
+                key={technology}
+                name={technology ? tech.name : technology}
+                url={technology ? tech.url : undefined}
+                icon={technology ? tech.icon : undefined}
+                />
+              );
+            })}
           </div>
         </div>
       </main>
