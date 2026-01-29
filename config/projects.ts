@@ -37,7 +37,7 @@ export const projects: Project[] = [
     "Landing page de présentation responsive",
     "Synchronisation multi-appareils",
   ],
-  image: ["/provisions-home.webp", "/provisions-recipes.webp", "/provisions-shopping-list.webp","/provisions-meal-planner.webp","/provisions-recipe-detail.webp"],
+  image: ["/provisions-landing.png","/provisions-home.webp", "/provisions-recipes.webp", "/provisions-shopping-list.webp","/provisions-meal-planner.webp","/provisions-recipe-detail.webp"],
   technologies: [
     "reactnative",
     "expo",
@@ -71,7 +71,7 @@ export const projects: Project[] = [
       "Composants UI réutilisables",
       "Page d'accueil et page produit",
     ],
-    image: ["/animo-home.webp", ],
+    image: ["/animo-home.png", ],
     technologies: [
       "figma",
     ],
@@ -98,7 +98,7 @@ export const projects: Project[] = [
       "Architecture microservices",
       "API RESTful",
     ],
-    image: ["/placeholder-project.jpg"],
+    image: [],
     technologies: ["node", "express", "mongodb", "postman", "jwt", "typescript"],
     cours: "420-708-AH",
     githubUrl: "#",
@@ -158,7 +158,7 @@ export const projects: Project[] = [
       "Intégration APIs REST",
       "Mode clair/sombre",
     ],
-    image: ["/placeholder-project.jpg"],
+    image: [],
     technologies: [
       "reactnative",
       "expo",
@@ -192,7 +192,7 @@ export const projects: Project[] = [
       "Score CVSS de la vulnérabilité",
       "Rapport d'analyse de sécurité complet",
     ],
-    image: ["/placeholder-project.jpg"],
+    image: [],
     technologies: [
       "docker",
       "dockercompose",

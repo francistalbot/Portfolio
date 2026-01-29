@@ -47,27 +47,36 @@ export default async function ProjectDetail({
             ))}
           </div>
           <div className="flex gap-4">
+            {project.githubUrl && (
             <a
               href={project.githubUrl}
               className="px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors font-medium"
             >
               Code source
             </a>
+            )}
+            {project.liveUrl && (
             <a
               href={project.liveUrl}
               className="px-6 py-3 border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium"
             >
               Démo en ligne
             </a>
+          )}
           </div>
         </div>
 
         {/* Image du projet */}
-        <div className="aspect-video bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg mb-8 flex items-center justify-center">
-          <span className="text-white text-xl font-medium">
-            Capture d'écran du projet
-          </span>
-        </div>
+        {project.image && project.image[0] && 
+          <div className="max-w-xl m-auto rounded-lg aspect-video bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg mb-8 flex items-center justify-center">
+            <img
+              src={`/img/projects${project.image[0]}`}
+              alt={project.title}
+              className="object-scale-down rounded-lg  w-full h-full group-hover:scale-105 transition-transform"
+              />
+          </div>
+        }
+        
 
         {/* Description détaillée */}
         <div className="bg-white dark:bg-zinc-800 rounded-lg p-8 shadow-sm mb-8">
