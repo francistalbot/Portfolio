@@ -31,9 +31,10 @@ export default function Projects() {
                   className="object-scale-down w-full h-full group-hover:scale-105 transition-transform"
                 />
                 ) : (
-                <span className="text-white text-lg font-medium">
-                  Image du projet
-                </span>)}
+                  <span className="text-white text-5xl font-bold flex items-center justify-center w-full h-full">
+                    {project.title?.[0]?.toUpperCase() || '?'}
+                  </span>
+                )}
               </div>
               <div className="p-6">
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
