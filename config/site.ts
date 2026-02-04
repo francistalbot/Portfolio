@@ -13,7 +13,7 @@ export const siteConfig = {
 };
 
 export const navLinks = [
-  { href: "#home", label: "Accueil" },
+  { href: "/", label: "Accueil" },
   { href: "/projects", label: "Projets" },
   { href: "/about", label: "À propos" },
  // { href: "#contact", label: "Contact" },

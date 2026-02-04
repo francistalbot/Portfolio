@@ -5,7 +5,7 @@ import { Pill } from "@/components/ui/pill";
 export default function Projects() {
   return (
     <div className="min-h-screen">
-      <main className="max-w-[var(--width-content)] mx-auto px-4 sm:px-12 md:px-12 lg:px-8 py-20">
+      <main className="max-w-[var(--width-content)] mx-auto px-4 sm:px-12 md:px-12 lg:px-8 py-10">
         <div className="mb-12">
           <h1 className="text-2xl font-mono font-semibold text-bark-dark dark:text-foreground mb-4">
             Mes Projets

@@ -40,7 +40,7 @@ export default function RootLayout({
       className={`${fonts.serif.variable} ${fonts.mono.variable} motion-safe:scroll-smooth scroll-pt-16`}
       suppressHydrationWarning
     >
-      <body className="bg-gradient-to-b from-paper to-white dark:from-bark-dark dark:to-bark">
+      <body className="bg-paper dark:bg-bark">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

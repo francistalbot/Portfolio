@@ -11,7 +11,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Colonne 1: Logo et Description */}
           <div className="space-y-4">
-              <Icons.LogoFT className="size-8 text-moss dark:text-sage" />
+              <Icons.LogoFT className="size-8" />
             <p className="font-serif text-sm text-bark dark:text-parchment">
               {siteConfig.description}
             </p>

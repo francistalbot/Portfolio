@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded text-sm font-mono font-medium transition-all duration-[250ms] ease-out disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-moss/50",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded text-sm font-mono font-bold transition-all duration-[250ms] ease-out disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-moss/50",
   {
     variants: {
       variant: {
@@ -18,7 +18,7 @@ const buttonVariants = cva(
           "bg-parchment text-bark-dark border-2 border-parchment hover:bg-[#E0D4BC] hover:-translate-y-0.5",
         ghost:
           "hover:bg-parchment dark:hover:bg-wood/30 text-bark dark:text-parchment",
-        link: "text-moss underline-offset-4 hover:underline hover:text-sage",
+        link: "underline-offset-4 hover:underline hover:text-sage",
       },
       size: {
         default: "h-10 px-5 py-2.5 has-[>svg]:px-4",

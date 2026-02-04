@@ -35,17 +35,15 @@ export function MobileNavigation({ className }: { className?: string }) {
       <NavigationMenuList className="flex-wrap">
         <NavigationMenuItem>
           <NavigationMenuTrigger noChevron={true} className={navigationMenuTriggerStyle()}>
-            <Icons.MenuBurger className="size-5 rotate-0 scale-100 transition dark:-rotate-90 dark:scale-0" />
+            <Icons.MenuBurger className="size-5" />
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             {navLinks.map((link) => (
-              <NavigationMenuItem key={link.href}>
-                <NavigationMenuLink asChild>
-                  <Link href={link.href} onClick={(e) => handleClick(e, link.href)} className="whitespace-nowrap px-4 py-3 text-base">
-                    {link.label}
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
+              <NavigationMenuLink key={link.href} asChild>
+                <Link href={link.href} onClick={(e) => handleClick(e, link.href)} className="whitespace-nowrap px-4 py-3 text-base block">
+                  {link.label}
+                </Link>
+              </NavigationMenuLink>
             ))}
           </NavigationMenuContent>
         </NavigationMenuItem>

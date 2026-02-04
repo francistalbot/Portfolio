@@ -17,8 +17,8 @@ export default async function ProjectDetail({
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-zinc-50 to-white dark:from-zinc-900 dark:to-black">
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div className="min-h-screen">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Breadcrumb */}
         <div className="mb-8">
           <Link

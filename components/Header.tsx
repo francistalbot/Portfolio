@@ -8,9 +8,9 @@ import { MobileNavigation } from "./MobileNavigation";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-[100] w-full animate-delay-1000 animate-fade-down border-b border-border bg-background/90 backdrop-blur-[10px]">
+    <header className="sticky top-0 z-50 w-full animate-delay-1000 animate-fade-down border-b border-border bg-background/10 backdrop-blur-[10px]">
       <div className="mx-auto px-8 flex h-16 max-w-[var(--width-content)] items-center gap-8">
-        <Link href="/#home" className="transition-colors duration-[250ms] ease-out hover:text-moss">
+        <Link href="/" className="transition-colors duration-[250ms] ease-out hover:text-moss">
           <Icons.LogoFT className="size-6" />
           <span className="sr-only">Francis Talbot</span>
         </Link>

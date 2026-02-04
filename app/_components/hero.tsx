@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const hero = () => {
     return (
-        <section id="hero" className="max-w-[var(--width-text)] mx-auto my-12 px-12 py-16 relative bg-white dark:bg-card border border-border rounded-xl shadow-[0_4px_24px_rgba(44,36,22,0.08)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.3)] before:content-[''] before:absolute before:top-16 before:left-6 before:w-1 before:h-[120px] before:bg-gradient-to-b before:from-moss before:to-terminal-green before:rounded before:animate-[slideDown_0.8s_ease-out]">
+        <section id="hero" className="max-w-[var(--width-text)] mx-auto px-12 py-16 relative bg-white dark:bg-card border border-border rounded-xl shadow-[0_4px_24px_rgba(44,36,22,0.08)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.3)] before:content-[''] before:absolute before:top-16 before:left-6 before:w-1 before:h-[120px] before:bg-gradient-to-b before:from-moss before:to-terminal-green before:rounded before:animate-[slideDown_0.8s_ease-out]">
           {/* Hero Section */}
           <div className="text-center tracking-tight mb-8">
             <h1 className="text-4xl font-mono font-semibold text-bark-dark dark:text-foreground mb-3 animate-[fadeInUp_0.6s_ease-out]">

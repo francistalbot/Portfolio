@@ -54,7 +54,7 @@ const Projects = () => {
               {project.liveUrl && (
                 <Button
                   asChild
-                  className="h-8 px-3 text-xs font-medium "
+                  className="h-8 px-3 text-xs"
                   variant="default"
                 >
                   <Link
@@ -70,7 +70,7 @@ const Projects = () => {
               {project.githubUrl && (
               <Button
                 asChild
-                className="h-8 px-3 text-xs font-medium "
+                className="h-8 px-3 text-xs "
                 variant="outline"
               >
                 <Link

@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <main id="home" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <main id="home" className="max-w-7xl mx-auto px-4 py-10 sm:px-6 lg:px-8">
         <Hero/>
         <Separator className="my-10" />
         <Projects/>
