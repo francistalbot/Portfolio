@@ -1,16 +1,18 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Newsreader, IBM_Plex_Mono } from "next/font/google";
 
-const sans = Geist({
-  variable: "--font-sans",
+const serif = Newsreader({
+  variable: "--font-serif",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
-const mono = Geist_Mono({
+const mono = IBM_Plex_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 export const fonts = {
-  sans,
+  serif,
   mono,
 };

@@ -55,7 +55,7 @@ export const projects: Project[] = [
 },
   {
     id: "2",
-    featured: true,
+    featured: false,
     title: "Boutique Animo - Système de Design Complet",
     description:
       "Conception complète d'une boutique en ligne responsive avec prototype interactif desktop et mobile.",
@@ -106,9 +106,9 @@ export const projects: Project[] = [
   {
     id: "4",
     featured: true,
-    title: "Libraire - Plateforme E-commerce Laravel",
+    title: "Bibliothèque en Ligne ",
     description:
-      "Plateforme e-commerce complète de gestion de bibliothèque avec paiements intégrés et panneau admin.",
+      "Plateforme e-commerce Laravel complète ",
     longDescription:
       "Développement d'une application web transactionnelle complète pour la gestion d'une bibliothèque en ligne. Système d'authentification avec gestion des rôles (admin/utilisateur), CRUD complet pour les livres, panier d'achat dynamique, intégration des APIs de paiement PayPal et Stripe, système de remises et coupons, historique des transactions, recherche avancée avec filtres multiples, et section de contact avec gestion des messages. Architecture MVC avec Laravel et base de données MySQL relationnelle.",
     tags: ["Laravel", "E-commerce", "PayPal", "Stripe", "MySQL"],
@@ -137,9 +137,9 @@ export const projects: Project[] = [
   {
     id: "5",
     featured: true,
-    title: "RouteTracker - Application de Gestion de Trajets GPS",
+    title: "RouteTracker ",
     description:
-      "Application mobile multiplateforme de tracking GPS avec synchronisation cloud et mode hors ligne.",
+      "Application mobile multiplateforme de tracking GPS",
     longDescription:
       "Application React Native complète pour la gestion et le suivi de trajets GPS. Authentification sécurisée avec Firebase Auth, synchronisation des données entre Cloud Firestore et SQLite pour le support hors ligne, tracking GPS en temps réel avec affichage sur carte interactive, système de partage de trajets entre utilisateurs, catégorisation des trajets (personnel/affaire) avec navigation par onglets, thème clair/sombre personnalisable, et pagination optimisée des listes avec lazy loading.",
     tags: ["React Native", "Firebase", "Google Maps", "Expo", "Zustand"],

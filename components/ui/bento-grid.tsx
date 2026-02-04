@@ -7,7 +7,7 @@ function BentoGridRoot(props: DivProps) {
     <div
       {...props}
       className={cn(
-        "mx-auto grid max-w-7xl grid-cols-1 gap-4 md:auto-rows-fr md:grid-cols-3 lg:grid-cols-4",
+        "mx-auto grid max-w-[var(--width-content)] grid-cols-1 gap-8 md:auto-rows-fr md:grid-cols-3 lg:grid-cols-4",
         props.className
       )}
     />
@@ -19,7 +19,7 @@ function BentoGridItem(props: DivProps) {
     <div
       {...props}
       className={cn(
-        "group/bento row-span-1 flex flex-col justify-between gap-4 rounded-xl border border-neutral-200 bg-white p-4 shadow-input transition duration-200 hover:shadow-xl dark:border-neutral-700 dark:bg-neutral-900",
+        "group/bento row-span-1 flex flex-col gap-3 rounded-lg border border-border bg-white p-4 transition-all duration-[250ms] ease-out hover:-translate-y-1 hover:shadow-[var(--shadow-md)] dark:bg-card dark:border-border relative overflow-hidden before:absolute before:top-0 before:left-0 before:right-0 before:h-[3px] before:bg-gradient-to-r before:from-moss before:to-terminal-green before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-[250ms]",
         props.className
       )}
     />
@@ -31,7 +31,7 @@ function BentoGridBody(props: DivProps) {
     <div
       {...props}
       className={cn(
-        "flex-1 transition duration-200 group-hover/bento:translate-x-2",
+        "",
         props.className
       )}
     />
@@ -43,9 +43,10 @@ function BentoGridTitle(props: DivProps) {
     <div
       {...props}
       className={cn(
-        "my-2 font-bold text-neutral-600 dark:text-neutral-200",
+        "text-lg mb-1 font-mono font-semibold text-bark-dark dark:text-foreground",
         props.className
       )}
+      style={{ ...props.style }}
     />
   );
 }
@@ -55,9 +56,10 @@ function BentoGridDescription(props: DivProps) {
     <div
       {...props}
       className={cn(
-        "font-normal text-neutral-600 text-xs dark:text-neutral-300",
+        "text-sm font-serif text-bark dark:text-parchment leading-relaxed",
         props.className
       )}
+      style={{ ...props.style }}
     />
   );
 }

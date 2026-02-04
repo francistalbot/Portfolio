@@ -11,13 +11,13 @@ interface PillProps {
   size?: "default" | "small" | "large";
 }
 const pillVariants = cva(
-  "flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 text-gray-900 dark:text-white font-medium hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors",
+  "flex items-center gap-1.5 font-mono text-moss dark:text-sage hover:bg-moss hover:text-white dark:hover:bg-sage dark:hover:text-bark-dark transition-all duration-[250ms] ease-out",
   {
     variants: {
     size:{
-      default: "px-3 py-1 text-base rounded-lg",
-      small: "px-2 py-1 text-sm rounded-full",
-      large: "px-4 py-2 text-lg rounded-lg",
+      default: "px-2.5 py-1 text-xs rounded-md bg-moss/8 dark:bg-sage/10",
+      small: "px-2 py-0.5 text-[0.65rem] rounded bg-moss/8 dark:bg-sage/10",
+      large: "px-3 py-1.5 text-sm rounded-md bg-moss/8 dark:bg-sage/10",
     }
   },
   defaultVariants: {
@@ -37,7 +37,7 @@ export const Pill = ({
   const content = (
     <>
       {IconComponent && <IconComponent className="size-4" />}
-      <span className="text-gray-900 dark:text-white font-medium">{name}</span>
+      <span className="font-mono">{name}</span>
     </>
   );
   if (url) {

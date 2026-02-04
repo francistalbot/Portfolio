@@ -37,10 +37,10 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${fonts.sans.variable} ${fonts.mono.variable} motion-safe:scroll-smooth scroll-pt-16`}
+      className={`${fonts.serif.variable} ${fonts.mono.variable} motion-safe:scroll-smooth scroll-pt-16`}
       suppressHydrationWarning
     >
-      <body className=" bg-gradient-to-b from-zinc-50 to-white dark:from-zinc-900 dark:to-black">
+      <body className="bg-gradient-to-b from-paper to-white dark:from-bark-dark dark:to-bark">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

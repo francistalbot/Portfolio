@@ -14,17 +14,17 @@ import { Pill } from "@/components/ui/pill";
 
 export default function About() {
   return (
-    <section id="about" className="mt-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12">
+    <section id="about" className="mt-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 className="text-2xl font-mono font-semibold text-bark-dark dark:text-foreground mb-12">
         Compétences
       </h2>
       <Accordion type="single" collapsible className="w-full mx-auto space-y-4" >
         {aboutItems.map((item, i) => (
-          <AccordionItem value={item.id} key={item.id} className="bg-white border rounded-xl p-4 shadow-input transition duration-200 hover:shadow-xl">
-            <AccordionTrigger className="text-xl font-semibold cursor-pointer">{item.title}</AccordionTrigger>
+          <AccordionItem value={item.id} key={item.id} className="bg-white dark:bg-card border border-border rounded-lg p-6 transition-all duration-[250ms] ease-out hover:-translate-y-1 hover:shadow-[var(--shadow-md)]">
+            <AccordionTrigger className="text-lg font-mono font-semibold text-bark-dark dark:text-foreground cursor-pointer">{item.title}</AccordionTrigger>
             <AccordionContent>
               {item.technologies && (
-                <div className="mt-4 flex flex-wrap gap-3">
+                <div className="mt-4 flex flex-wrap gap-2">
                     {item.technologies.map((technology) => {
                       const tech = getTechnology(technology);
                       if (!tech) return null;
@@ -44,14 +44,16 @@ export default function About() {
         ))}
       </Accordion>
       
-      <Button
-        className="mx-auto my-8 p-5 flex w-max"
-        variant="outline"
-      >
-        <Link href="/about" className="text-base font-semibold">
-          En savoir plus sur moi
-        </Link>
-      </Button>
+      <div className="flex justify-center mt-6">
+        <Button
+          asChild
+          size="lg"
+        >
+          <Link href="/about">
+            En savoir plus sur moi
+          </Link>
+        </Button>
+      </div>
     </section>
   );
 }

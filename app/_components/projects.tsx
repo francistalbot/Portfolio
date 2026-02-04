@@ -10,15 +10,15 @@ import { Pill } from "@/components/ui/pill";
 const Projects = () => {
     const featuredProjects = projects.filter(project => project.featured);
     return (
-    <section id="projects" className="mt-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className=" text-3xl font-bold text-gray-900 dark:text-white mb-12">
+    <section id="projects" className="mt-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-2xl font-mono font-semibold text-bark-dark dark:text-foreground mb-12">
             Mes Projets
         </h2>
       <BentoGrid.Root >
         {featuredProjects.map((project, i) =>
             <BentoGrid.Item
               key={project.id}
-              className= {`  ${i === 0 ? "md:col-span-2 lg:col-span-2" : ""} ${i === 1 ? "md:row-span-2 lg:row-span-1 lg:col-span-1" : ""}${i === 2 ? "md:row-span-2 lg:row-span-2 lg:col-span-1" : ""}${i === 4 ? "md:row-span-1 md:col-span-2 lg:col-span-2" : ""}`}
+              className= {`  ${i === 0 ? "md:col-span-2 lg:col-span-3" : ""} ${i === 1 ? "md:row-span-2 lg:row-span-2 lg:col-span-1" : ""} ${i === 2 ? " lg:row-span-1 lg:col-span-2" : ""}`}
             > 
          
             <div className="flex flex-wrap items-center gap-3" >
@@ -33,8 +33,9 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     target="_blank"
                     title={tech.name}
+                    className="text-moss dark:text-sage transition-colors duration-[250ms] ease-out hover:text-terminal-green dark:hover:text-terminal-green"
                   >
-                    <Icon className="size-6" />
+                    <Icon className="size-5" />
                   </a>
                 );
               })}
@@ -49,20 +50,19 @@ const Projects = () => {
                 {project.description}
               </BentoGrid.Description>
             </BentoGrid.Body>
-            <div className="mt-4 flex items-center justify-between">
+            <div className="flex items-center gap-2 flex-wrap">
               {project.liveUrl && (
                 <Button
                   asChild
-                  className="rounded-full"
-                  size="sm"
-                  variant="outline"
+                  className="h-8 px-3 text-xs font-medium "
+                  variant="default"
                 >
                   <Link
                     href={project.liveUrl}
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <Icons.Eye className="mr-2 size-4" />
+                    <Icons.Eye className="mr-1.5 size-3.5" />
                     Preview
                   </Link>
                 </Button>
@@ -70,8 +70,7 @@ const Projects = () => {
               {project.githubUrl && (
               <Button
                 asChild
-                className="rounded-full"
-                size="sm"
+                className="h-8 px-3 text-xs font-medium "
                 variant="outline"
               >
                 <Link
@@ -79,8 +78,8 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <Icons.GitHub className="mr-2 size-4" />
-                  Source code
+                  <Icons.GitHub className="mr-2 size-4 " />
+                  Code Source
                 </Link>
               </Button>
               )}
@@ -89,14 +88,16 @@ const Projects = () => {
             )}
       </BentoGrid.Root>
 
-      <Button
-        className="mx-auto my-8 p-5 flex w-max"
-        variant="outline"
-      >
-        <Link href="/projects" className="text-base font-semibold">
-          Voir tous mes projets
-        </Link>
-      </Button>
+      <div className="flex justify-center mt-6">
+        <Button
+          asChild
+          size="lg"
+        >
+          <Link href="/projects">
+            Voir tous mes projets
+          </Link>
+        </Button>
+      </div>
     </section>);
 }
 export default Projects;

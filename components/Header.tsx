@@ -8,15 +8,15 @@ import { MobileNavigation } from "./MobileNavigation";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full animate-delay-1000 animate-fade-down border-border/40 border-b bg-bg backdrop-blur-sm dark:bg-bg/95 supports-backdrop-filter:dark:bg-bg/60">
-      <div className="mx-auto px-8 flex h-16 max-w-(--breakpoint-2xl) items-center">
-        <Link href="/#home">
+    <header className="sticky top-0 z-[100] w-full animate-delay-1000 animate-fade-down border-b border-border bg-background/90 backdrop-blur-[10px]">
+      <div className="mx-auto px-8 flex h-16 max-w-[var(--width-content)] items-center gap-8">
+        <Link href="/#home" className="transition-colors duration-[250ms] ease-out hover:text-moss">
           <Icons.LogoFT className="size-6" />
           <span className="sr-only">Francis Talbot</span>
         </Link>
 
         <DesktopNavigation className="hidden md:flex"/>
-        <nav className="ml-auto hidden items-center gap-1 md:flex">
+        <nav className="ml-auto hidden items-center gap-4 md:flex">
           <Link href={siteConfig.links.github}>
             <Button rel="noreferrer" size="icon" variant="link">
               <Icons.GitHub className="size-4" />
