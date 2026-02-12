@@ -16,15 +16,16 @@ export default function About() {
   return (
     <section id="about" className="mt-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-2xl font-mono font-semibold text-bark-dark dark:text-foreground mb-12">
-        Compétences
+        Technologies et compétences
       </h2>
-      <Accordion type="single" collapsible className="w-full mx-auto space-y-4" >
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">  
         {aboutItems.map((item, i) => (
-          <AccordionItem value={item.id} key={item.id} className="bg-white dark:bg-card border border-border rounded-lg p-6 transition-all duration-[250ms] ease-out hover:-translate-y-1 hover:shadow-[var(--shadow-md)]">
-            <AccordionTrigger className="text-lg font-mono font-semibold text-bark-dark dark:text-foreground cursor-pointer">{item.title}</AccordionTrigger>
-            <AccordionContent>
+              <div  key={item.id} className="bg-card dark:bg-card rounded-lg p-6 shadow-sm border border-border">
+                <h3 className="text-lg font-semibold mb-4 text-bark-dark dark:text-foreground flex items-center gap-2">      
+                  {item.title}
+                </h3>
               {item.technologies && (
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2">
                     {item.technologies.map((technology) => {
                       const tech = getTechnology(technology);
                       if (!tech) return null;
@@ -34,15 +35,15 @@ export default function About() {
                           name={technology ? tech.name : technology}
                           url={technology ? tech.url : undefined}
                           icon={technology ? tech.icon : undefined}
+                     
                         />
                       );
                   })}
                 </div>
               )}
-            </AccordionContent>
-          </AccordionItem>
+            </div>
         ))}
-      </Accordion>
+      </div>
       
       <div className="flex justify-center mt-6">
         <Button
